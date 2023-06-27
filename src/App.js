@@ -8,19 +8,7 @@ function App() {
     fetchData();
   }, []);
 
-  const fetchData = () => {
-    fetch('http://localhost:3000/data', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(postData)
-    })
-      .then(response => response.json())
-      .then(data => setResponseData(data))
-      .catch(error => console.error(error));
-  };
-
+  
   return (
     <div>
       <h1>POST data:</h1>
